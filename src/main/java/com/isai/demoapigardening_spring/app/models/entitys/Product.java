@@ -26,7 +26,7 @@ public class Product {
     private String nameProduct;
 
     @ManyToOne
-    @JoinColumn(name = "name_range")
+    @JoinColumn(name = "name_range", columnDefinition = "varchar(50)")
     private Range rangeProduct;
 
     @Size(max = 25)

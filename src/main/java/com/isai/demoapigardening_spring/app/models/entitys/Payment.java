@@ -2,6 +2,8 @@ package com.isai.demoapigardening_spring.app.models.entitys;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
@@ -29,5 +31,9 @@ public class Payment {
 
     @NotNull
     private BigDecimal amount;
+
+    @ManyToOne
+    @JoinColumn(name = "code_customer")
+    private  Customer codeCustomer;
 
 }

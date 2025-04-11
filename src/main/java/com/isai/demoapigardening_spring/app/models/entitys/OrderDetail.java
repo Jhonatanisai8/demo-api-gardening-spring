@@ -30,7 +30,8 @@ public class OrderDetail {
 
     @ManyToOne
     @JoinColumn(
-            name = "code_product"
+            name = "code_product",
+            columnDefinition = "varchar(15)"
     )
     private Product product;
 
